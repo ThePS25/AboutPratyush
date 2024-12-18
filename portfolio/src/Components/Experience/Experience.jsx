@@ -1,4 +1,4 @@
-import { FaCss3, FaFigma, FaHtml5, FaJs, FaReact } from "react-icons/fa";
+import { FaCss3, FaFigma, FaHtml5, FaJs, FaReact,FaGithub } from "react-icons/fa";
 import {
   SiMongodb,
   SiTypescript,
@@ -49,6 +49,9 @@ const Experience = () => {
           <span className="p-3 bg-zinc-950 flex items-center rounded-2xl">
             <SiPrisma color="white" size={50} />
           </span>
+          <span className="p-3 bg-zinc-950 flex items-center rounded-2xl">
+            <FaGithub color="white" size={50} />
+          </span>
         </div>
         <div className="flex-1">
           <div className="flex gap-10 bg-slate-950 bg-opacity-45 mt-4 rounded-lg p-4 items-start">
@@ -58,27 +61,38 @@ const Experience = () => {
                 Frontend Engineer, Spark Eighteen Lifestyle Pvt. Ltd.
               </h2>
               <p className="text-sm leading-tight font-thin">
-                August 2024 - Present
+                February 2024 - Present
               </p>
-              <ul className="text-sm p-2">
+              <ul className="text-base p-2 flex flex-col gap-2">
                 <li>
-                  - Developing a SaaS Human Resource Management platform with
-                  features for finance, personal management, and payroll.
+                  - Spearheading the development of a SaaS Human Resource
+                  Management platform, integrating features for finance,
+                  personnel management, and payroll, serving over 5,000 users.
                 </li>
                 <li>
-                  - Creating modular, scalable UI components with React,
-                  TypeScript, HTML, CSS, and Ant Design to enhance user
-                  experience.
+                  - Designing modular, scalable UI components using React,
+                  TypeScript, HTML, CSS, and Ant Design, reducing development
+                  time by 20%.
                 </li>
                 <li>
-                  - Collaborating with cross-functional teams to integrate APIs,
-                  ensuring data accuracy and performance optimization.
+                  - Collaborating with cross-functional teams for efficient API
+                  integration, ensuring 99.9% data accuracy and optimizing
+                  performance by 15%.
+                </li>
+                <li>
+                  - Refactoring front-end codebase for modularity, increasing
+                  scalability and reducing bug reports by 55%.
+                </li>
+                <li>
+                  - Delivering responsive web designs across devices, boosting
+                  mobile traffic by 30% using ReactJS, TypeScript, and REST
+                  APIs.
                 </li>
               </ul>
             </span>
           </div>
 
-          <div className="flex gap-10 bg-slate-950 bg-opacity-45 mt-4 rounded-lg p-4 items-start">
+          {/* <div className="flex gap-10 bg-slate-950 bg-opacity-45 mt-4 rounded-lg p-4 items-start">
             <img src={SP18} alt="spark18" className="w-20 h-20" />
             <span className="text-white">
               <h2 className="leading-tight">
@@ -99,7 +113,7 @@ const Experience = () => {
                 </li>
               </ul>
             </span>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
