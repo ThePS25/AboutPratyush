@@ -3,7 +3,7 @@ import TextChange from "../TextChange";
 
 const Home = () => {
   const resumeLink =
-    "https://drive.google.com/file/d/1ZizHBydGZcUB_vSQ6CLcF3OinxPiZeJ9/view";
+    "https://drive.google.com/file/d/1LvdBCW9biQutsB97xBgrEumQOxG3jAI1/view";
   return (
     <div className="text-white flex w-full justify-around items-start p-6 md:p-10">
       <div className="md:w-2/4 md:pt-10 ">
