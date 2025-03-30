@@ -61,7 +61,7 @@ const Experience = () => {
                 Frontend Engineer, Spark Eighteen Lifestyle Pvt. Ltd.
               </h2>
               <p className="text-sm leading-tight font-thin">
-                February 2024 - Present
+              August 2024 - Present
               </p>
               <ul className="text-base p-2 flex flex-col gap-2">
                 <li>
@@ -92,7 +92,7 @@ const Experience = () => {
             </span>
           </div>
 
-          {/* <div className="flex gap-10 bg-slate-950 bg-opacity-45 mt-4 rounded-lg p-4 items-start">
+          <div className="flex gap-10 bg-slate-950 bg-opacity-45 mt-4 rounded-lg p-4 items-start">
             <img src={SP18} alt="spark18" className="w-20 h-20" />
             <span className="text-white">
               <h2 className="leading-tight">
@@ -113,7 +113,7 @@ const Experience = () => {
                 </li>
               </ul>
             </span>
-          </div> */}
+          </div>
         </div>
       </div>
     </div>
