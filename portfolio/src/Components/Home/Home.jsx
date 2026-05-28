@@ -2,8 +2,7 @@ import avatarImg from "../../assets/me-stand.png";
 import TextChange from "../TextChange";
 
 const Home = () => {
-  const resumeLink =
-    "https://drive.google.com/file/d/1mqkq9UVspLKZWEWkgr_IWNZ87-MHbpV_/view";
+  const resumeLink = import.meta.env.VITE_RESUME_URL;
   return (
     <div className="text-white flex w-full justify-around items-start p-6 md:p-10">
       <div className="md:w-2/4 md:pt-10 ">
@@ -16,8 +15,10 @@ const Home = () => {
                  `}
         </p>
         <button
-          onClick={() => window.open(resumeLink, "_blank")}
-          className="mt-5 md:md-10 text-white py02 px-3 text-sm md:text-lg md:py-2 md:px-4 hover:opacity-85 duration-300 hover:scale-105 font-semibold rounded-3xl bg-[#465697]"
+          type="button"
+          disabled={!resumeLink}
+          onClick={() => resumeLink && window.open(resumeLink, "_blank")}
+          className="mt-5 md:md-10 text-white py02 px-3 text-sm md:text-lg md:py-2 md:px-4 hover:opacity-85 duration-300 hover:scale-105 font-semibold rounded-3xl bg-[#465697] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
         >
           Download my resume
         </button>
