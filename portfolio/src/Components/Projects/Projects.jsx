@@ -3,6 +3,7 @@ import ProjectCard from "./ProjectCard";
 import CatchUp from "../../assets/culogo.png";
 import Zoophii from "../../assets/zoophiiLogo.png";
 import Traasdi from "../../assets/traasdi.png";
+import AIcareerPilot from "../../assets/ai-career-pilot.png";
 
 const Projects = () => {
   return (
@@ -15,6 +16,13 @@ const Projects = () => {
           bannerImg={Zoophii}
           demolink="https://zoophii.onrender.com/"
           sourcelink="https://github.com/ThePS25/E-Commerce.git"
+        />
+        <ProjectCard
+          title="AI Career Copilot"
+          main="An AI-powered career assistant that analyzes resumes, provides ATS feedback, recommends jobs and courses, and generates personalized interview preparation reports."
+          bannerImg={AIcareerPilot}
+          demolink="https://yourowncareerguide.vercel.app/"
+          sourcelink="https://github.com/ThePS25/ai-career-frontend.git"
         />
         <ProjectCard
           title="CatchUp - Social Platform"

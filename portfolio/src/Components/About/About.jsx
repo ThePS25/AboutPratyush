@@ -21,7 +21,7 @@ const About = () => {
                   About Me
                 </h1>
                 <p className="text-sm md:text-md leading-tight">
-                  {`Hi, I'm Pratyush, I graduated in 2024 with a B.Tech in Computer and Communication Engineering from LNM Institute of Information Technology, Jaipur. During my time there, I was actively involved in various extracurricular activities, including leading the theatre society and managing hospitality for major cultural events. Beyond coding, I find joy in writing poetry, exploring music, and participating in theatre. I also enjoy listening to business podcasts, constantly learning and drawing inspiration from successful industry leaders.`}
+                  {`Hi, I'm Pratyush — a Software Development Engineer at Amazon in Bangalore, working on scalable backend systems and product-facing features. I graduated in 2024 with a B.Tech in Computer and Communication Engineering from LNMIIT, Jaipur. In college, I led the theatre society and managed hospitality for major cultural events. Outside work, I write poetry, explore music, stay active in theatre, and listen to business podcasts for fresh ideas and perspective.`}
                 </p>
               </span>
             </div>
@@ -30,16 +30,15 @@ const About = () => {
 
               <span className="w-96">
                 <h1 className="text-xl md:text-2xl font-semibold leading-normal">
-                  Frontend Developer
+                  Software Engineer
                 </h1>
                 <p className="text-sm md:text-md leading-tight">
-                  I have hands-on experience in frontend development.With a
-                  solid foundation in C++, OOPS concepts, and modern web
-                  technologies, I specialize in creating seamless user
-                  experiences using React, TypeScript, and CSS. I’ve built and
-                  deployed web apps like Zoophii and CatchUp, integrating APIs,
-                  managing data securely, and ensuring responsive, cross-device
-                  compatibility.
+                  I build across the stack — from React and TypeScript interfaces
+                  to Java microservices on AWS. I focus on clean architecture,
+                  reliable deployments, and systems that scale. Side projects
+                  like Zoophii, CatchUp, and AI Career Pilot pair strong UX with
+                  solid engineering: API integration, secure data handling, and
+                  responsive design across devices.
                 </p>
               </span>
             </div>

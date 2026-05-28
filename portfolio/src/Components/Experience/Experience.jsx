@@ -1,4 +1,4 @@
-import { FaCss3, FaFigma, FaHtml5, FaJs, FaReact,FaGithub } from "react-icons/fa";
+import { FaAmazon, FaCss3, FaFigma, FaGithub, FaHtml5, FaJs, FaReact } from "react-icons/fa";
 import {
   SiMongodb,
   SiTypescript,
@@ -54,6 +54,44 @@ const Experience = () => {
           </span>
         </div>
         <div className="flex-1">
+          <div className="flex gap-10 bg-slate-950 bg-opacity-45 mt-4 rounded-lg p-4 items-start">
+            <span className="w-20 h-20 flex items-center justify-center rounded-lg bg-black/30">
+              <FaAmazon color="#FF9900" size={48} />
+            </span>
+            <span className="text-white">
+              <h2 className="leading-tight">
+                Software Development Engineer, Amazon (Bangalore, India)
+              </h2>
+              <p className="text-sm leading-tight font-thin">June 2025 - Present</p>
+              <ul className="text-base p-2 flex flex-col gap-2">
+                <li>
+                  - Built scalable ingestion architecture for AWS Q Business
+                  using AWS services and Java microservices, aggregating 10+
+                  enterprise datasets.
+                </li>
+                <li>
+                  - Refactored legacy ingestion into a modular multi-layer
+                  pipeline, reducing new-source onboarding effort by 40% and
+                  integration complexity by 35%.
+                </li>
+                <li>
+                  - Expanded platform availability by onboarding Dublin and
+                  Sydney regions, reducing latency for global users.
+                </li>
+                <li>
+                  - Modernized backend services by modularizing FBA systems and
+                  upgrading to newer JDK versions, improving performance by 47%
+                  and test coverage by 30%.
+                </li>
+                <li>
+                  - Owned deployments, monitoring, and on-call operations for
+                  distributed microservices, including mitigation of 14+ Sev-2
+                  incidents with minimal customer impact.
+                </li>
+              </ul>
+            </span>
+          </div>
+
           <div className="flex gap-10 bg-slate-950 bg-opacity-45 mt-4 rounded-lg p-4 items-start">
             <img src={SP18} alt="spark18" className="w-20 h-20" />
             <span className="text-white">
