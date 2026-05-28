@@ -10,9 +10,8 @@ const Home = () => {
           <TextChange />
         </h1>
         <p className="text-sm md:text-2xl tracking-tight ">
-          {` a Frontend Developer passionate about
-                  building intuitive, efficient, and responsive user interfaces.
-                 `}
+          a Software Engineer passionate about building scalable systems and
+          intuitive, high-quality user experiences.
         </p>
         <button
           type="button"
