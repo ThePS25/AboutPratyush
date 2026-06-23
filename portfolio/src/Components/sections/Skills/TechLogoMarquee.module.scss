@@ -1,0 +1,107 @@
+.wrap {
+  @include glass-panel;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.25rem 0 1.25rem 1.25rem;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  box-shadow: $shadow-card;
+}
+
+.label {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  padding-right: 1.25rem;
+}
+
+.labelTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: $color-text;
+  letter-spacing: -0.02em;
+}
+
+.labelSub {
+  font-family: $font-mono;
+  font-size: 0.7rem;
+  color: $color-text-dim;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.marquee {
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+
+.track {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  width: max-content;
+  animation: scroll 32s linear infinite;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.tile {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  width: 5.5rem;
+  transition: transform $transition-fast;
+
+  &:hover {
+    transform: translateY(-4px) scale(1.04);
+  }
+}
+
+.logoFrame {
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: $radius-md;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid $color-border;
+  padding: 0.5rem;
+  transition: border-color $transition-fast, box-shadow $transition-fast;
+
+  .tile:hover & {
+    border-color: $color-border-accent;
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.12);
+  }
+}
+
+.logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.name {
+  font-family: $font-mono;
+  font-size: 0.65rem;
+  color: $color-text-muted;
+  text-align: center;
+  white-space: nowrap;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}

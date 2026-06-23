@@ -1,0 +1,79 @@
+
+.dock {
+  position: fixed;
+  bottom: clamp(1rem, 3vw, 1.5rem);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  padding: 0.4rem;
+  @include glass-panel;
+  border-radius: $radius-full;
+  box-shadow: $shadow-card, 0 8px 32px rgba(0, 0, 0, 0.3);
+
+  @include respond-to(md) {
+    bottom: 1.5rem;
+  }
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+}
+
+.item {
+  position: relative;
+  padding: 0.6rem 0.85rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: $color-text-muted;
+  border-radius: $radius-full;
+  transition: color $transition-fast, transform $transition-fast;
+  white-space: nowrap;
+
+  @include respond-to(md) {
+    padding: 0.65rem 1.1rem;
+    font-size: 0.8rem;
+  }
+
+  &:hover {
+    color: $color-text;
+    transform: translateY(-2px);
+  }
+
+  &.active {
+    color: $color-accent;
+  }
+
+  @include focus-ring;
+}
+
+.indicator {
+  position: absolute;
+  inset: 0;
+  border-radius: $radius-full;
+  background: $color-accent-soft;
+  z-index: -1;
+}
+
+.label {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 639px) {
+  .list {
+    max-width: calc(100vw - 2rem);
+    overflow-x: auto;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .item {
+    padding: 0.55rem 0.7rem;
+    font-size: 0.7rem;
+  }
+}
