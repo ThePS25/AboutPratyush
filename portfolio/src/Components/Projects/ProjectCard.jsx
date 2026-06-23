@@ -1,10 +1,42 @@
+import { useEffect, useState } from "react";
+import ProjectPlaceholder from "../../assets/project-placeholder.svg";
+
+const getDemoPreviewUrl = (url) =>
+  `https://s0.wp.com/mshots/v1/${encodeURIComponent(url)}?w=640&h=360`;
+
 const ProjectCard = ({ title, main, bannerImg, demolink, sourcelink }) => {
+  const [imageSrc, setImageSrc] = useState(() => {
+    if (bannerImg) return bannerImg;
+    if (demolink) return getDemoPreviewUrl(demolink);
+    return ProjectPlaceholder;
+  });
+
+  useEffect(() => {
+    if (bannerImg) setImageSrc(bannerImg);
+    else if (demolink) setImageSrc(getDemoPreviewUrl(demolink));
+    else setImageSrc(ProjectPlaceholder);
+  }, [bannerImg, demolink]);
+
+  const handleImageError = () => {
+    if (bannerImg && demolink && imageSrc === bannerImg) {
+      setImageSrc(getDemoPreviewUrl(demolink));
+      return;
+    }
+    setImageSrc(ProjectPlaceholder);
+  };
+
   return (
     <div
       style={{ minWidth: "30%" }}
       className="p-3 md:p-6 flex flex-col w-80 bg-[#0c0e19] shadow-xl shadow-slate-900 rounded-2xl"
     >
-      <img className="p-4 flex-1 " src={bannerImg} alt="" />
+      <img
+        className="p-4 flex-1 object-cover rounded-lg"
+        src={imageSrc}
+        alt={`${title} preview`}
+        loading="lazy"
+        onError={handleImageError}
+      />
       <h3 className="px-4 text-xl md:text-2xl font-bold leading-normal">
         {title}
       </h3>

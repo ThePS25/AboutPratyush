@@ -4,12 +4,34 @@ import CatchUp from "../../assets/culogo.png";
 import Zoophii from "../../assets/zoophiiLogo.png";
 import Traasdi from "../../assets/traasdi.png";
 import AIcareerPilot from "../../assets/ai-career-pilot.png";
+import ProjectPlaceholder from "../../assets/project-placeholder.svg";
 
 const Projects = () => {
   return (
     <div id="Projects" className="p-10 md:p-24 text-white ">
       <h1 className="text-2xl md:text-4xl text-white font-bold">Projects</h1>
-      <div className="py-12 px-8 flex flex-wrap gap-4 md:gap-8" style={{justifyContent:"space-between"}}>
+      <div
+        className="py-12 px-8 flex flex-wrap gap-4 md:gap-8"
+        style={{ justifyContent: "space-between" }}
+      >
+        <ProjectCard
+          title="AI Referral Copilot"
+          main="An AI-powered platform that generates personalized referral request messages based on a user's resume, job description, company, and recruiter details. The system creates tailored outreach messages to improve networking and referral success rates."
+          demolink="https://yourownreferralassistant.vercel.app/"
+          sourcelink="https://github.com/ThePS25/ai-referral-frontend"
+        />
+        <ProjectCard
+          title="PulseIQ"
+          main="A real-time website analytics platform that provides traffic monitoring, visitor insights, engagement tracking, and performance metrics through an interactive dashboard."
+          demolink="https://pulseiq-webstats.vercel.app/"
+          sourcelink="https://github.com/ThePS25/pulseiq-frontend"
+        />
+        <ProjectCard
+          title="DesignScape - System Design Playground"
+          main="An interactive platform for learning and visualizing distributed systems, scalable architectures, and system design concepts through diagrams and simulations."
+          demolink="https://my-designscape-playground.vercel.app/"
+          sourcelink="https://github.com/ThePS25/system-design-playground-frontend"
+        />
         <ProjectCard
           title="Zoophii - Pet supplies website"
           main="This is a pet supplies ecommerce website creted in  MERN stack. It has a lot of features like product listing, product detail, cart, checkout,payment gateway, and more."
@@ -20,7 +42,7 @@ const Projects = () => {
         <ProjectCard
           title="AI Career Copilot"
           main="An AI-powered career assistant that analyzes resumes, provides ATS feedback, recommends jobs and courses, and generates personalized interview preparation reports."
-          bannerImg={AIcareerPilot}
+          // bannerImg={AIcareerPilot}
           demolink="https://yourowncareerguide.vercel.app/"
           sourcelink="https://github.com/ThePS25/ai-career-frontend.git"
         />
