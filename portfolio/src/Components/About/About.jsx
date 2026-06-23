@@ -35,8 +35,9 @@ const About = () => {
                 <p className="text-sm md:text-md leading-tight">
                   I build across the stack — from React and TypeScript interfaces
                   to Java microservices on AWS. I focus on clean architecture,
-                  reliable deployments, and systems that scale. Side projects
-                  like Zoophii, CatchUp, and AI Career Pilot pair strong UX with
+                  reliable deployments, and systems that scale.                   Side projects
+                  including AI Referral Copilot, PulseIQ, and AI Career Copilot
+                  pair strong UX with
                   solid engineering: API integration, secure data handling, and
                   responsive design across devices.
                 </p>
