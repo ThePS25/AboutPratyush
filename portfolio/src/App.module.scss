@@ -1,0 +1,14 @@
+.app {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.main {
+  position: relative;
+  z-index: 3;
+}
+
+.fallback {
+  min-height: 40vh;
+}

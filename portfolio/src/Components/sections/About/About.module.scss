@@ -1,0 +1,81 @@
+
+.about {
+  position: relative;
+  z-index: 3;
+  padding-block: $section-padding;
+}
+
+.inner {
+  @include container;
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+
+  @include respond-to(lg) {
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+}
+
+.imageCol {
+  display: flex;
+  justify-content: center;
+}
+
+.imageFrame {
+  position: relative;
+  border-radius: $radius-xl;
+  overflow: hidden;
+  @include glass-panel;
+  padding: 0.5rem;
+}
+
+.image {
+  width: 100%;
+  max-width: 360px;
+  border-radius: $radius-lg;
+  object-fit: cover;
+}
+
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 60%, rgba(10, 14, 23, 0.4));
+  pointer-events: none;
+}
+
+.cards {
+  display: grid;
+  gap: 1rem;
+
+  @include respond-to(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.card {
+  height: 100%;
+}
+
+.cardIcon {
+  font-size: 1.25rem;
+  color: $color-accent;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.cardTitle {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: $color-text;
+}
+
+.cardContent {
+  font-size: 0.875rem;
+  color: $color-text-muted;
+  line-height: 1.65;
+}

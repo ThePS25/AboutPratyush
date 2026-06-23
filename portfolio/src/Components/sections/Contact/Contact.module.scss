@@ -1,0 +1,201 @@
+
+.contact {
+  position: relative;
+  z-index: 3;
+  padding-block: $section-padding;
+  padding-bottom: calc($section-padding + 5rem);
+}
+
+.inner {
+  @include container;
+}
+
+.panel {
+  display: grid;
+  gap: 1rem;
+
+  @include respond-to(lg) {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    align-items: stretch;
+  }
+}
+
+.intro {
+  display: flex;
+  min-height: 0;
+}
+
+.introCard {
+  flex: 1;
+  width: 100%;
+  min-height: 7.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+
+  @include respond-to(lg) {
+    min-height: 100%;
+  }
+}
+
+.greeting {
+  font-size: 1.05rem;
+  color: $color-text;
+  line-height: 1.75;
+  margin-bottom: 0.75rem;
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: $font-mono;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: $color-success;
+  padding: 0.4rem 0.75rem;
+  border-radius: $radius-full;
+  background: rgba(52, 211, 153, 0.1);
+  border: 1px solid rgba(52, 211, 153, 0.25);
+  width: fit-content;
+}
+
+.statusDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: $color-success;
+  box-shadow: 0 0 8px rgba(52, 211, 153, 0.6);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.links {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-rows: 1fr;
+  gap: 1rem;
+
+  @include respond-to(lg) {
+    min-height: 100%;
+  }
+}
+
+.linkItem {
+  display: flex;
+  min-height: 0;
+  height: 100%;
+}
+
+.linkCard {
+  @include glass-panel;
+  width: 100%;
+  height: 100%;
+  min-height: 7.75rem;
+  padding: 1.25rem;
+  text-align: left;
+  color: $color-text;
+  background: rgba(17, 24, 39, 0.75);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: border-color $transition-base, transform $transition-fast, box-shadow $transition-base,
+    background $transition-base;
+  cursor: pointer;
+
+  &:hover:not(.disabled) {
+    border-color: $color-border-accent;
+    background: $color-surface-hover;
+    transform: translateY(-3px);
+    box-shadow: $shadow-card, $shadow-glow;
+
+    .linkLabel {
+      color: $color-accent;
+    }
+
+    .linkValue {
+      color: $color-text-muted;
+    }
+
+    .linkIcon {
+      color: $color-accent;
+      border-color: $color-border-accent;
+      background: $color-accent-soft;
+    }
+  }
+
+  &.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+
+    .linkLabel,
+    .linkValue {
+      color: $color-text-dim;
+    }
+  }
+
+  @include focus-ring;
+}
+
+.linkIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 2.25rem;
+  height: 2.25rem;
+  font-family: $font-mono;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: $color-accent;
+  margin-bottom: 0.75rem;
+  border-radius: $radius-sm;
+  border: 1px solid $color-border-accent;
+  background: rgba(56, 189, 248, 0.08);
+  transition: color $transition-fast, border-color $transition-fast, background $transition-fast;
+}
+
+.linkLabel {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: $color-text;
+  margin-bottom: 0.25rem;
+  transition: color $transition-fast;
+}
+
+.linkValue {
+  display: block;
+  width: 100%;
+  margin-top: auto;
+  font-size: 0.78rem;
+  color: $color-text-muted;
+  font-family: $font-mono;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transition: color $transition-fast;
+}
+
+.footer {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid $color-border;
+  text-align: center;
+
+  p {
+    font-size: 0.8rem;
+    color: $color-text-muted;
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}

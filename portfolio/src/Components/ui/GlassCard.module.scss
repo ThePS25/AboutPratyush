@@ -1,0 +1,14 @@
+
+.card {
+  @include glass-panel;
+  padding: 1.5rem;
+  box-shadow: $shadow-card;
+  transition: border-color $transition-base, box-shadow $transition-base;
+}
+
+.hoverable {
+  &:hover {
+    border-color: $color-border-accent;
+    box-shadow: $shadow-card, $shadow-glow;
+  }
+}

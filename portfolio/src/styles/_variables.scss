@@ -1,0 +1,90 @@
+// Design tokens
+$color-bg: #0a0e17;
+$color-bg-elevated: #111827;
+$color-surface: rgba(17, 24, 39, 0.65);
+$color-surface-hover: rgba(30, 41, 59, 0.75);
+$color-border: rgba(148, 163, 184, 0.12);
+$color-border-accent: rgba(56, 189, 248, 0.25);
+
+$color-text: #e2e8f0;
+$color-text-muted: #94a3b8;
+$color-text-dim: #64748b;
+
+$color-accent: #38bdf8;
+$color-accent-soft: rgba(56, 189, 248, 0.15);
+$color-accent-glow: rgba(56, 189, 248, 0.35);
+$color-secondary: #818cf8;
+$color-success: #34d399;
+
+$font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+$font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+$radius-sm: 8px;
+$radius-md: 12px;
+$radius-lg: 16px;
+$radius-xl: 24px;
+$radius-full: 9999px;
+
+$shadow-glow: 0 0 40px rgba(56, 189, 248, 0.08);
+$shadow-card: 0 4px 24px rgba(0, 0, 0, 0.25);
+
+$transition-fast: 0.2s ease;
+$transition-base: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+
+$nav-height: 72px;
+$section-padding: clamp(4rem, 8vw, 7rem);
+$container-max: 1200px;
+
+@mixin glass-panel {
+  background: $color-surface;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid $color-border;
+  border-radius: $radius-lg;
+}
+
+@mixin focus-ring {
+  &:focus-visible {
+    outline: 2px solid $color-accent;
+    outline-offset: 3px;
+  }
+}
+
+@mixin section-heading {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: $color-text;
+}
+
+@mixin mono-label {
+  font-family: $font-mono;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: $color-accent;
+}
+
+@mixin container {
+  width: 100%;
+  max-width: $container-max;
+  margin-inline: auto;
+  padding-inline: clamp(1.25rem, 4vw, 2rem);
+}
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == sm {
+    @media (min-width: 640px) {
+      @content;
+    }
+  } @else if $breakpoint == md {
+    @media (min-width: 768px) {
+      @content;
+    }
+  } @else if $breakpoint == lg {
+    @media (min-width: 1024px) {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+
+.header {
+  margin-bottom: clamp(2rem, 5vw, 3.5rem);
+}
+
+.label {
+  @include mono-label;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.title {
+  @include section-heading;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  color: $color-text-muted;
+  max-width: 560px;
+  line-height: 1.7;
+}

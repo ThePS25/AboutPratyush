@@ -1,0 +1,163 @@
+
+.cardWrapper {
+  transform-style: preserve-3d;
+  position: relative;
+  z-index: 1;
+
+  &:hover {
+    z-index: 5;
+  }
+}
+
+.card {
+  overflow: visible;
+  padding: 0;
+  transition: box-shadow $transition-base, border-color $transition-base;
+
+  &:hover {
+    border-color: $color-border-accent;
+    box-shadow: $shadow-card, 0 0 40px rgba(56, 189, 248, 0.1);
+  }
+
+  &.expanded {
+    border-color: $color-border-accent;
+  }
+}
+
+.previewWrap {
+  position: relative;
+  height: 200px;
+}
+
+.previewButton {
+  position: absolute;
+  inset: 28px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  z-index: 3;
+
+  &:hover .previewLabel,
+  &:focus-visible .previewLabel {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @include focus-ring;
+}
+
+.previewLabel {
+  font-family: $font-mono;
+  font-size: 0.75rem;
+  color: $color-accent;
+  padding: 0.45rem 0.9rem;
+  border: 1px solid $color-border-accent;
+  border-radius: $radius-full;
+  background: rgba(10, 14, 23, 0.88);
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity $transition-fast, transform $transition-fast;
+  backdrop-filter: blur(8px);
+}
+
+.body {
+  padding: 1.25rem 1.5rem 1.5rem;
+}
+
+.title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  font-size: 0.85rem;
+  color: $color-text-muted;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.techTag {
+  font-family: $font-mono;
+  font-size: 0.65rem;
+  padding: 0.25rem 0.55rem;
+  border-radius: $radius-sm;
+  background: $color-accent-soft;
+  color: $color-accent;
+  border: 1px solid $color-border-accent;
+}
+
+.highlights {
+  overflow: hidden;
+
+  ul {
+    padding-left: 1rem;
+    list-style: disc;
+  }
+
+  li {
+    font-size: 0.8rem;
+    color: $color-text-muted;
+    margin-bottom: 0.35rem;
+  }
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.link,
+.linkPrimary,
+.expandBtn {
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.45rem 0.9rem;
+  border-radius: $radius-sm;
+  transition: background $transition-fast, color $transition-fast;
+  @include focus-ring;
+}
+
+.link {
+  border: 1px solid $color-border;
+  color: $color-text-muted;
+
+  &:hover {
+    color: $color-text;
+    border-color: $color-text-dim;
+  }
+}
+
+.linkPrimary {
+  background: $color-accent-soft;
+  border: 1px solid $color-border-accent;
+  color: $color-accent;
+
+  &:hover {
+    background: rgba(56, 189, 248, 0.25);
+  }
+}
+
+.expandBtn {
+  margin-left: auto;
+  color: $color-text-dim;
+  font-family: $font-mono;
+  font-size: 0.7rem;
+
+  &:hover {
+    color: $color-accent;
+  }
+}

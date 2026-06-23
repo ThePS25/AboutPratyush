@@ -1,0 +1,127 @@
+
+.boot {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  background: $color-bg;
+  padding: 1.5rem;
+}
+
+.terminal {
+  width: 100%;
+  max-width: 520px;
+  @include glass-panel;
+  overflow: hidden;
+  box-shadow: $shadow-card, 0 0 80px rgba(56, 189, 248, 0.06);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1rem;
+  border-bottom: 1px solid $color-border;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+
+  &[data-color='red'] {
+    background: #f87171;
+  }
+
+  &[data-color='yellow'] {
+    background: #fbbf24;
+  }
+
+  &[data-color='green'] {
+    background: #34d399;
+  }
+}
+
+.title {
+  margin-left: 0.5rem;
+  font-family: $font-mono;
+  font-size: 0.75rem;
+  color: $color-text-dim;
+}
+
+.body {
+  padding: 1.5rem;
+  min-height: 180px;
+  font-family: $font-mono;
+  font-size: 0.875rem;
+}
+
+.line {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  opacity: 0.3;
+  transition: opacity 0.3s ease;
+
+  &.visible {
+    opacity: 1;
+  }
+}
+
+.prompt {
+  color: $color-accent;
+}
+
+.text {
+  color: $color-text;
+}
+
+.cursor {
+  color: $color-accent;
+  animation: blink 1s step-end infinite;
+}
+
+.check {
+  color: $color-success;
+  margin-left: auto;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.progressBar {
+  height: 3px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, $color-accent, $color-secondary);
+  transition: width 0.1s linear;
+}
+
+.skip {
+  font-family: $font-mono;
+  font-size: 0.8rem;
+  color: $color-text-muted;
+  padding: 0.5rem 1rem;
+  border: 1px solid $color-border;
+  border-radius: $radius-full;
+  transition: color $transition-fast, border-color $transition-fast;
+
+  &:hover {
+    color: $color-accent;
+    border-color: $color-border-accent;
+  }
+
+  @include focus-ring;
+}
