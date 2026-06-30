@@ -38,7 +38,7 @@ export const NAV_ITEMS: NavItem[] = [
   { id: 'about', label: 'About' },
   { id: 'skills', label: 'Skills' },
   { id: 'projects', label: 'Projects' },
-  { id: 'experience', label: 'Experience' },
+  { id: 'experience', label: 'Experience', shortLabel: 'Exp' },
   { id: 'achievements', label: 'Stats' },
   { id: 'contact', label: 'Contact' },
 ];
@@ -152,7 +152,7 @@ export const PROJECTS: Project[] = [
     description:
       'An AI-powered platform that generates personalized referral request messages based on resume, job description, company, and recruiter details.',
     image: projectPlaceholder,
-    technologies: ['React', 'TypeScript', 'OpenAI', 'Vercel'],
+    technologies: ['React', 'TypeScript', 'Gemini API', 'Vercel'],
     githubUrl: 'https://github.com/ThePS25/ai-referral-frontend',
     demoUrl: 'https://yourownreferralassistant.vercel.app/',
     highlights: [
@@ -227,7 +227,7 @@ export const PROJECTS: Project[] = [
     description:
       'AI-powered career assistant with resume analysis, ATS feedback, job recommendations, and interview preparation reports.',
     image: aiCareerPilot,
-    technologies: ['React', 'TypeScript', 'OpenAI', 'Vercel'],
+    technologies: ['React', 'TypeScript', 'Gemini API', 'Vercel'],
     githubUrl: 'https://github.com/ThePS25/ai-career-frontend.git',
     demoUrl: 'https://yourowncareerguide.vercel.app/',
     highlights: [

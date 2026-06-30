@@ -1,6 +1,7 @@
 export interface NavItem {
   id: string;
   label: string;
+  shortLabel?: string;
 }
 
 export interface Skill {
